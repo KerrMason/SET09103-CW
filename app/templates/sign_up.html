@@ -1,0 +1,49 @@
+{%extends 'header.html'%}
+{%block title%}Sign-Up Page{%endblock%}
+{%block content%}
+<div id="home-screen" class="home-screen">
+    <div id="main-header" class="main-header">
+        <p>Sign-Up</p>
+    </div>
+
+    <div id="description" class="description">
+        <p>Please enter your details.</p>
+    </div>
+    <form class="login-form" method="POST">
+        <div class="input-group">
+            <label for="username">Username:</label>
+            <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Enter username."
+            />
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter password."
+            />
+            <div class="input-group">
+                <label for="password2">Re-password:</label>
+                <input
+                    type="password"
+                    name="password2"
+                    id="password2"
+                    placeholder="Re-enter password."
+                />
+            {% with messages = get_flashed_messages() %} {% if messages %} {%
+            for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %} {% endif %} {% endwith %}
+        </div>
+
+        <button type="submit" class="login-button">Sign-Up</button>
+        
+    </form><div class ="back-btn"">
+    <a href="{{url_for('index')}}"><button class="login-button">Back</button></a></div>
+    </div>
+{%endblock%}

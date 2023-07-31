@@ -1,0 +1,43 @@
+{%extends 'header.html'%}
+{%block title%}Log-In Page{%endblock%}
+{%block content%}
+<div id="home-screen" class="home-screen">
+    <div id="main-header" class="main-header">
+        <p>Log-In</p>
+    </div>
+
+    <div id="description" class="description">
+        <p>Please enter login credentials.</p>
+    </div>
+
+    <form class="login-form" method="POST">
+        <div class="input-group">
+            <label for="username">Username:</label>
+            <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Enter username."
+            />
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter password."
+            />
+            {% with messages = get_flashed_messages() %} {% if messages %} {%
+            for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %} {% endif %} {% endwith %}
+        </div>
+
+        <button type="submit" class="login-button">Login</button>
+        
+    </form><div class ="back-btn">
+    <a href="{{url_for('index')}}"><button class="login-button">Back</button></a>
+</div>
+    </div>
+{%endblock%}

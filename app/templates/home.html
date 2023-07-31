@@ -1,0 +1,70 @@
+{%extends "header.html"%}
+	{%block title%}Home{%endblock%}
+	{%block login%}
+	<a href="{{url_for('logout')}}"><button id="login" class ="login">{{username}}</button></a>
+			<button id="close" class="close hide" onclick="closes()">Close</button>{%endblock%}
+			{%block content%}
+			<div id="home-screen" class="home-screen">
+				<div id="main-header" class="main-header">
+					<p>Welcome to the quiz, {{username}}</p>
+				</div>
+
+				<div id="description" class="description">
+					<p>A trivia based quiz game.</p>
+				</div>
+
+				<button id="rules-btn" class="btn" onclick="rules()">Rules</button>
+				<button id="start-btn" class="btn" onclick="startQuiz()">
+					Start Quiz
+				</button>
+			</div>
+
+			<div id="rules-screen" class="rules-screen hide">
+				<div id="rules-header" class="main-header">
+					<p>Rules Page</p>
+				</div>
+
+				<div id="rules-description" class="description">
+					<p>The rules of the game.</p>
+				</div>
+
+				<div id="rule-list" class="list">
+					<ul>
+						<li>
+							You'll be presented with a series of multiple choice questions.
+						</li>
+						<li>Click the correct answer to increase your score.</li>
+						<li>Your results will be shown at the end!</li>
+					</ul>
+				</div>
+				<button id="return-btn" class="btn" onclick="returnHome()">
+					Return Home
+				</button>
+			</div>
+
+			<div id="ready-screen" class="ready-screen hide">
+				<div id="ready-up" class="ready-up">Are you ready?</div>
+				<button id="ready-btn" class="btn" onclick="team1ready()">
+					Ready!
+				</button>
+			</div>
+
+			<div id="questions-screen" class="questions-screen hide">
+				<div id="score" class="score">Score</div>
+				<div id="prompt" class="prompt">Question?</div>
+
+				<div id="answer-flex">
+					<button id="answer1" class="btn">1</button>
+					<button id="answer2" class="btn">2</button>
+					<button id="answer3" class="btn">3</button>
+				</div>
+			</div>
+
+			<div id="score-screen" class="score-screen hide">
+				<div id="final-score" class="final-score">Score</div>
+				<button id="finish" class="btn" onclick="returnHome()">
+					Return Home
+				</button>
+			</div>
+		{%endblock%}
+

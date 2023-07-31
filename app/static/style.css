@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+   
+background-color: rgba(190,190,190,1);
+}
+header{
+    font-family: Lobster;
+    display:flex;
+    justify-content: space-between;
+    background-color: grey;
+    color: white;
+
+    border-bottom: 1px solid grey;
+    padding:30px;
+    margin-bottom:80px;
+}
+header .close{
+    color: red;
+    font-family: Lobster;
+    font-size:large;
+    border:none;
+    background-color: transparent;
+}
+header .login{
+    color: white;
+    font-family: Lobster;
+    font-size:large;
+    border:none;
+    background-color: transparent;
+    
+
+}
+
+header .options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    grid-column: 3/span 3;
+    grid-row: 4/span 3;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    font-weight:700;
+}
+.input-group input{
+    padding: .5em;
+    font-size:18px;
+    background-color: white;
+    margin-top:.5em;
+    padding-right:5em;
+    border-radius: 5px;
+    color: grey;
+}
+.login-button{
+    margin-top:.5em;
+    margin-bottom:40px;
+    cursor:pointer;
+    z-index:2;
+
+    font-weight: bold;
+    font-size:large;
+    background-color:rgba(150,150,150,0.8);
+    border-radius:10px;
+    padding:20px 80px 20px 80px;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 3px 3px 5px black;
+}
+.back-btn{
+    grid-column: 3/span 3;
+    grid-row: 7;
+}
+
+.box{
+    padding:1%;
+    margin:auto;
+    margin-bottom:3%;
+    max-width:90%;
+    justify-content: center;
+    text-align:center;
+    background-color: black;
+    border:2px solid grey;
+    border-radius:20px;
+    box-shadow: 10px 10px 15px black;
+    color: white;
+}
+.home-screen{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap:5%;
+}
+
+.rules-screen{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap:5%;
+}
+.questions-screen{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap:30px;
+}
+.ready-screen{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap:5%;
+}
+.score-screen{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap:5%;
+}
+.main-header{
+    font-family: Lobster;
+    font-size:28px;
+    border-bottom:1px double white;
+    grid-column: 3/span 3;
+    grid-row: 2;
+    
+}
+.description{
+    grid-column: 3/span 3;
+    grid-row:3;
+}
+
+.score{
+    grid-column:1;
+    grid-row:1;
+    font-weight: bold;
+    font-size:large;
+    background-color:rgba(180,180,180,0.8);
+    border-radius:10px;
+    padding:20px 40px 20px 40px;
+    border: 1px solid white;
+}
+
+
+.prompt{
+    grid-column:4;
+    grid-row:2;
+    width: 500px;
+    font-family: Lobster;
+    font-size:32px;
+}
+.ready-up{
+    grid-column:3/span 3;
+    grid-row:2;
+    font-family: Lobster;
+    font-size:32px;
+}
+#ready-btn{
+    grid-column:3/span 3;
+    grid-row:4;
+}
+
+#pass{
+    grid-column:2/span 5;
+    grid-row:5;
+}
+#rules-btn{
+    grid-column:2/span 2;
+    grid-row:5;
+
+}
+#start-btn{
+    grid-column:5/span 2;
+    grid-row:5;
+    
+}
+#return-btn{
+    grid-column:4/span 1;
+    grid-row:5;
+
+}
+#finish{
+    grid-column:4/span 1;
+    grid-row:5;
+}
+.btn{
+    font-weight: bold;
+    font-size:large;
+    background-color:rgba(180,180,180,0.8);
+    border-radius:10px;
+    padding:20px 80px 20px 80px;
+    border: 1px solid white;
+    box-shadow: 3px 3px 5px black;
+
+}
+.list{
+    grid-column:2/span 5;
+    grid-row:4;
+}
+button:hover{
+    cursor:pointer;
+    background-color: rgba(180,180,180,0.2);
+}
+li{
+    padding:10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hide{
+    display: none;
+}
+.team1{
+    background-color: rgba(0,180,255)
+}
+
+.final-score{
+    grid-column:4;
+    grid-row:2;
+    font-family: Lobster;
+    font-size:32px;
+}
+
+#answer-flex{
+    display:flex;
+    flex-flow:row;
+    justify-self: center;
+    align-content: space-evenly;
+    gap: 40px;
+    grid-column:2/span 5;
+    grid-row:4;
+}
